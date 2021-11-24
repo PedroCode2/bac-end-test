@@ -1,14 +1,10 @@
-
-
 const express = require('express');
 const cors = require('cors');
-
 const Conn = require('./conn/conn');
-
 const TarefasRouter = require('./routes/tarefas.routes');
 const UserRouter = require('./routes/user.routes');
-
 const app = express();
+
 app.use(express.json());
 app.use(cors());
 
@@ -24,7 +20,7 @@ const db_user = process.env.db_user;
 const db_pass = process.env.DB_PASS;
 const db_data = process.env.DB_DATA;
 
-
+console.log(db_url, db_user, db_data, db_pass)
 
 Conn(db_url, db_user, db_pass, db_data);
 
