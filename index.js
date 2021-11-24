@@ -25,7 +25,7 @@ const db_data = process.env.DB_DATA;
 
 Conn(db_url, db_user, db_pass, db_data);
 
-const port = 3000;
+const port = 3001;
 
 app.listen(process.env.PORT || port, () => {
   console.log(`Servidor rodando na porta ${port}`);
